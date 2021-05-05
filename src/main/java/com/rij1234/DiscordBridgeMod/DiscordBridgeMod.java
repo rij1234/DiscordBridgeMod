@@ -24,11 +24,10 @@ import java.util.Locale;
 public class DiscordBridgeMod
 {
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     private static String wh_url = Config.WebhookUrl;
     public MinecraftServer server;
     private DiscordReceiver bot = new DiscordReceiver();
-
 
     public void sendToAll(String message){
         StringTextComponent text = new StringTextComponent(message);

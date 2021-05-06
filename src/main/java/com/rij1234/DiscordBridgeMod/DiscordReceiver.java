@@ -34,10 +34,6 @@ public class DiscordReceiver {
         }
     }
     public void run(DiscordBridgeMod main) {
-        // Log the bot in
-
-
-        // Add a listener which answers with "Pong!" if someone writes "!ping"
         api.addMessageCreateListener(event -> {
             if(event.getMessageAuthor().isBotUser() || event.getMessageAuthor().isWebhook()) return;
             if (event.getMessageContent().equalsIgnoreCase("!ping")) {
@@ -49,5 +45,4 @@ public class DiscordReceiver {
             }
         });
     }
-
 }

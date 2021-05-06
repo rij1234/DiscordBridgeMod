@@ -39,14 +39,13 @@ public class DiscordReceiver {
 
         // Add a listener which answers with "Pong!" if someone writes "!ping"
         api.addMessageCreateListener(event -> {
-                if(event.getMessageAuthor().isBotUser() || event.getMessageAuthor().isWebhook()) return;
+            if(event.getMessageAuthor().isBotUser() || event.getMessageAuthor().isWebhook()) return;
             if (event.getMessageContent().equalsIgnoreCase("!ping")) {
                 event.getChannel().sendMessage("Pong!");
             }
             long channel_id = Config.channel_id;
             if(event.getChannel().getId() == channel_id){
                 main.sendToAll("<" + event.getMessageAuthor().getName() + ">" + event.getMessageContent());
-
             }
         });
     }

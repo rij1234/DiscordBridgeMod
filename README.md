@@ -2,7 +2,7 @@
 ## This mod bridges a discord chat and a minecraft server
 mod is server only
 
-**DISCLAIMER**: This requires a working knowledge of how to make a discord bot account
+**DISCLAIMER**: This requires a working knowledge of how to make a discord bot account as well as a discord webhook
 
 # Setup in discord
 get your bot token<br />
